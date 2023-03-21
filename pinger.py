@@ -130,9 +130,9 @@ def ping(host, timeout=1):
     # fill in start. UPDATE THE QUESTION MARKS
     for index, row in response.iterrows():
         if row['rtt'] == 0:
-            packet_lost = 0
+            packet_lost = 1
         else:
-            packet_recv =  0
+            packet_recv =  1
 
     # You should have the values of delay for each ping here structured in a pandas dataframe;
     # fill in calculation for packet_min, packet_avg, packet_max, and stdev

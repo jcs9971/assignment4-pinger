@@ -51,7 +51,7 @@ def receiveOnePing(mySocket, ID, timeout, destAddr):
 
             ip_header = struct.unpack('!BBHHHBBH4s4s', recPacket[:20])
             length = ip_header[2]
-            addr = socket.inet_ntoa(ip_header[8])
+            addr = inet_ntoa(ip_header[8])
             ttl = ip_header[5]
 
             send_time = struct.unpack("d", recPacket[28:])[0]
